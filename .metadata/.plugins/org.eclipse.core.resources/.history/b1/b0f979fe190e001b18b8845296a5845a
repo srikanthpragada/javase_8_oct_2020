@@ -1,0 +1,14 @@
+
+public class FunDemo {
+
+	public static void wish(String name)
+	{
+		System.out.println("Hello, " + name);
+	}
+	
+	public static void main(String[] args) {
+  		 
+        wish("James");
+	}
+
+}
