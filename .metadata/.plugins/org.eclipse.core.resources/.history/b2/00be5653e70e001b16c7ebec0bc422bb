@@ -1,0 +1,16 @@
+package oop;
+
+public class TestAccount {
+
+	public static void main(String[] args) {
+		 SavingsAccount s1;
+		 
+		 s1 = new SavingsAccount();
+		 // s1.acno = 101;
+		 
+		 s1.open(1001, "James Gosling");
+		 s1.print();
+
+	}
+
+}
