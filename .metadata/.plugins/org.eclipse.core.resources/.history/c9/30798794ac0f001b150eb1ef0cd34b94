@@ -6,13 +6,12 @@ public class SavingsAccount {
      private String ahname;
      private double balance;
      
-     // Constructor  
-     public SavingsAccount(int ano, String name) {
+     // Methods 
+     public void open(int ano, String name) {
     	 acno = ano;
     	 ahname = name;
      }
      
-     // Methods
      public void print() {
     	 System.out.println(acno);
     	 System.out.println(ahname);
