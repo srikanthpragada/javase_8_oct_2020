@@ -10,6 +10,6 @@ public class TestAccount {
 		 s1.print();
 		 
 		 SavingsAccount s2  = new SavingsAccount(1002,"Scott Guthrie");
-		 System.out.printf("Balance = %.2f",s2.getBalance());
+		 System.out.printf("Balance = %f",s2.getBalance());
 	}
 }

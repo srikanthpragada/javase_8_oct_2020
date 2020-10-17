@@ -4,17 +4,7 @@ class Student {
 	private int admno;
 	private String name;
 	private int course, feepaid;
-	
-	// Static method 
-	public static int getTotalFee(int course) {
-		if (course == 1)
-			return 10000;
-		else if (course == 2)
-			return 15000;
-		else
-			return 8000;
-	}
-	
+
 	public Student(int admno, String name, int course) {
 		this.admno = admno;
 		this.name = name;
@@ -22,7 +12,7 @@ class Student {
 	}
 
 	public Student(int admno, String name, int course, int feepaid) {
-		this(admno, name, course);
+        this(admno,name,course);		
 		this.feepaid = feepaid;
 	}
 
@@ -31,7 +21,16 @@ class Student {
 	}
 
 	public int getDue() {
-		return Student.getTotalFee(this.course) - this.feepaid;
+		return getTotalFee() - this.feepaid;
+	}
+
+	public int getTotalFee() {
+		if (this.course == 1)
+			return 10000;
+		else if (this.course == 2)
+			return 15000;
+		else
+			return 8000;
 	}
 
 	public void print() {
@@ -40,13 +39,12 @@ class Student {
 		System.out.println(this.course);
 		System.out.println(this.feepaid);
 	}
+
 }
 
 public class TestStudent {
+
 	public static void main(String[] args) {
-		System.out.println(Student.getTotalFee(2));
-		
-		
 		Student s = new Student(1, "Mark", 2);
 		Student s2 = new Student(2, "Scott", 3, 3000);
 		s.pay(5000);
