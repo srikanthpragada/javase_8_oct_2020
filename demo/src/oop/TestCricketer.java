@@ -1,6 +1,6 @@
 package oop;
 
-class Cricketer {
+abstract class Cricketer {
 	protected String name, country;
 
 	public Cricketer(String name, String country) {
@@ -13,6 +13,8 @@ class Cricketer {
 		System.out.println(this.name);
 		System.out.println(this.country);
 	}
+
+	public abstract int getPoints();
 }
 
 class Batsman extends Cricketer {
@@ -61,11 +63,16 @@ public class TestCricketer {
 		bowler.print();
 		System.out.println(bowler.getPoints());
 		
-		Cricketer c = new Bowler("Abc","Aus",1800);   // Upcasting
-		Batsman bat = (Batsman) c;   // Downcasting
+		Cricketer c = new Batsman("Dhoni","Ind",1800);   // Upcasting
+		c.print();   // Runtime polymorphism 
+		c = new Bowler("Xyz","ENG",200);
+		c.print();
+		
+		System.out.println(c.getPoints());  // Runtime polymorphism 
 		
 		
-
+		System.out.println(10);  // compile-time polymorphism 
+		 
 	}
 
 }
