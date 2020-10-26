@@ -23,6 +23,11 @@ class Person {
 		} else
 			return false;
 	}
+	
+	@Override
+	public int hashCode() {
+		return this.age;
+	}
 }
 
 public class TestPerson {
@@ -30,6 +35,9 @@ public class TestPerson {
 	public static void main(String[] args) {
 		Person p1 = new Person("Larry", 35);
 		Person p2 = new Person("Larry", 35);
+		System.out.println(p1.hashCode());
+		System.out.println(p2.hashCode());
+		
 		System.out.println(p1 == p2);
 		System.out.println(p1.toString());
 		System.out.println(p1.equals(p2));
