@@ -2,7 +2,7 @@ package coll;
 
 import java.util.TreeSet;
 
-class Time{
+class Time implements Comparable<Time>{
 	private int h, m, s;
 
 	public Time(int h, int m, int s) {
@@ -30,11 +30,11 @@ class Time{
 	public int totalSeconds() {
 		return this.h * 3600 + this.m * 60 + this.s;
 	}
-//
-//	@Override
-//	public int compareTo(Time other) {
-//		return  this.totalSeconds() - other.totalSeconds(); 
-//	}
+
+	@Override
+	public int compareTo(Time other) {
+		return this.totalSeconds() - other.totalSeconds();
+	}
 }
 
 public class SortTimes {

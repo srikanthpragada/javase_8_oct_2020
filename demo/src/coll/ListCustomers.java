@@ -12,7 +12,8 @@ public class ListCustomers {
 
 		for (String line : lines) {
 			String parts[] = line.split(",");
-			customers.put(parts[0], parts[1]);
+			if(parts.length > 1)
+			     customers.put(parts[0], parts[1]);
 		}
 
 		for (String name : customers.keySet())
